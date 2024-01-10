@@ -40,8 +40,14 @@ const generatedPassword = [];
 
 function createPassword() {
   generatedPassword.length = 0;
-
   let inputValue = document.getElementById("number-input").value;
+
+  if (inputValue < 6) {
+    inputValue = 6;
+  } else if (inputValue > 16) {
+    inputValue = 16;
+  }
+
   for (let i = 0; i < inputValue; i++) {
     let randomNumber = Math.floor(Math.random() * randomCharacters.length);
 
