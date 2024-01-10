@@ -55,4 +55,6 @@ function createPassword() {
     generatedPassword.push(randomPassword);
   }
   console.log(generatedPassword);
+
+  document.querySelector(".output").textContent = generatedPassword.join(" ");
 }
